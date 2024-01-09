@@ -1,0 +1,21 @@
+﻿@model UpdateCategoryVM
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <p class="card-description">
+                Create category
+            </p>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label asp-for="Name" for="exampleInputUsername1">Name</label>
+                    <input asp-for="Name" type="text" class="form-control" id="exampleInputUsername1" placeholder="Name">
+                    <span asp-validation-for="Name"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                <button asp-action="index" class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
