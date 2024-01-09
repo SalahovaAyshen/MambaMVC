@@ -1,0 +1,57 @@
+﻿@model CreateProjectVM
+
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create Project</h4>
+
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label asp-for="Name"></label>
+                        <input asp-for="Name" class="form-control" placeholder="Name">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Client"></label>
+                        <input asp-for="Client" class="form-control" placeholder="Client">
+                        <span asp-validation-for="Client" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="ProjectUrl">Project Url</label>
+                        <input asp-for="ProjectUrl" class="form-control" placeholder="Project Url">
+                        <span asp-validation-for="ProjectUrl" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ProjectDate">Project Date</label>
+                        <input asp-for="ProjectDate" class="form-control" placeholder="Project Date">
+                        <span asp-validation-for="ProjectDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Detail"></label>
+                        <input asp-for="Detail" class="form-control" placeholder="Detail">
+                        <span asp-validation-for="Detail" class="text-danger"></span>
+                    </div> 
+                    <div class="form-group">
+                        <label asp-for="CategoryId">Categories</label>
+                        <select asp-for="CategoryId" asp-items="new SelectList(Model.Categories, (nameof(Category.Id)), (nameof(Category.Name)))">
+                            <option selected disabled>Choose the category</option>
+                        </select>
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Photo"></label>
+                        <input asp-for="Photo" class="form-control">
+                        <span asp-validation-for="Photo" class="text-danger"></span>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <a asp-action="index" class="btn btn-light">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

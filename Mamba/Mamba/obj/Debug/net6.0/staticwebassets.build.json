@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YQVcT4sHz6qgVNj0CY8HSAm3yFlE2+H+iasNnoeaeuM=",
+  "Hash": "6AkKZXG/oVXyZYkr7IWyEs5EAiXOtLsnpM2labgbUNQ=",
   "Source": "Mamba",
   "BasePath": "_content/Mamba",
   "Mode": "Default",
@@ -319,6 +319,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\portfolio\\portfolio-details-3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\hp\\Desktop\\MambaMVC\\Mamba\\Mamba\\wwwroot\\assets\\img\\slide\\07cd95a9-9c6b-4ece-b9a2-29d67297db01slide-2.jpg",
+      "SourceId": "Mamba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hp\\Desktop\\MambaMVC\\Mamba\\Mamba\\wwwroot\\",
+      "BasePath": "_content/Mamba",
+      "RelativePath": "assets/img/slide/07cd95a9-9c6b-4ece-b9a2-29d67297db01slide-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\slide\\07cd95a9-9c6b-4ece-b9a2-29d67297db01slide-2.jpg"
     },
     {
       "Identity": "C:\\Users\\hp\\Desktop\\MambaMVC\\Mamba\\Mamba\\wwwroot\\assets\\img\\slide\\slide-1.jpg",
