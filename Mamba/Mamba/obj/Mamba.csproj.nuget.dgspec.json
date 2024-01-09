@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\Desktop\\Mamba\\Mamba\\Mamba.csproj": {}
+    "C:\\Users\\hp\\Desktop\\MambaMVC\\Mamba\\Mamba\\Mamba.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Desktop\\Mamba\\Mamba\\Mamba.csproj": {
+    "C:\\Users\\hp\\Desktop\\MambaMVC\\Mamba\\Mamba\\Mamba.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\Mamba\\Mamba\\Mamba.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\MambaMVC\\Mamba\\Mamba\\Mamba.csproj",
         "projectName": "Mamba",
-        "projectPath": "C:\\Users\\hp\\Desktop\\Mamba\\Mamba\\Mamba.csproj",
+        "projectPath": "C:\\Users\\hp\\Desktop\\MambaMVC\\Mamba\\Mamba\\Mamba.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Desktop\\Mamba\\Mamba\\obj\\",
+        "outputPath": "C:\\Users\\hp\\Desktop\\MambaMVC\\Mamba\\Mamba\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
