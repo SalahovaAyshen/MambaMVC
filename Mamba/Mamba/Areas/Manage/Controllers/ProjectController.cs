@@ -74,6 +74,70 @@ namespace Mamba.Areas.Manage.Controllers
             return RedirectToAction(nameof(Index));
         
         }
+        public async Task<IActionResult> Update(int id)
+        {
+            if (id <= 0) return BadRequest();
+            Project project = await _context.Projects.FirstOrDefaultAsync(p => p.Id == id);
+            if (project == null) return NotFound();
+            UpdateProjectVM projectVM = new UpdateProjectVM
+            {
+                Name = project.Name,
+                Client = project.Client,
+                Detail = project.Detail,
+                ProjectDate = project.ProjectDate,
+                ProjectUrl = project.ProjectUrl,
+                CategoryId = (int)project.CategoryId,
+                Categories = await _context.Categories.ToListAsync(),
+            };
+            return View(projectVM);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Update(int id, UpdateProjectVM projectVM)
+        {
+            projectVM.Categories = await _context.Categories.ToListAsync();
 
+            if (id <= 0) return BadRequest();
+            Project project = await _context.Projects.FirstOrDefaultAsync(p => p.Id == id);
+            if (project == null) return NotFound();
+            if(!ModelState.IsValid) return View(projectVM);
+            if(projectVM.Photo is not null)
+            {
+                if (!projectVM.Photo.ValidateType("image/"))
+                {
+                    ModelState.AddModelError("Photo", "Wrong type");
+                    return View(projectVM);
+                }
+                if (!projectVM.Photo.ValidateSize(2 * 1024))
+                {
+                    ModelState.AddModelError("Photo", "Wrong size");
+                    return View(projectVM);
+                }
+
+                project.ImageUrl.DeleteFile(_env.WebRootPath, "assets", "img", "portfolio");
+                string filename = await projectVM.Photo.CreateFileAsync(_env.WebRootPath, "assets", "img", "portfolio");
+                project.ImageUrl = filename;
+
+            }
+
+            project.Name = projectVM.Name;
+            project.Client = projectVM.Client;
+            project.ProjectDate = projectVM.ProjectDate;
+            project.ProjectUrl = projectVM.ProjectUrl;
+            project.Detail = projectVM.Detail;
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (id <= 0) return BadRequest();
+            Project project = await _context.Projects.FirstOrDefaultAsync(p => p.Id == id);
+            if (project == null) return NotFound();
+            project.ImageUrl.DeleteFile(_env.WebRootPath, "assets", "img", "portfolio");
+            _context.Projects.Remove(project);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

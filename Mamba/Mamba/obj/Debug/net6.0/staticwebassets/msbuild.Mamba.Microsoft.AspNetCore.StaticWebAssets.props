@@ -64,6 +64,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\favicon.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\portfolio\e615c220-01fd-4f1e-b4dd-b8d7cd386766WhatsApp Image 2022-09-04 at 00.27.41 (2).jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mamba</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mamba</BasePath>
+      <RelativePath>assets/img/portfolio/e615c220-01fd-4f1e-b4dd-b8d7cd386766WhatsApp Image 2022-09-04 at 00.27.41 (2).jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\portfolio\e615c220-01fd-4f1e-b4dd-b8d7cd386766WhatsApp Image 2022-09-04 at 00.27.41 (2).jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\portfolio\efe9c569-9395-4454-9f97-ab3e8f54c6a8WhatsApp Image 2022-09-04 at 00.27.39 (1).jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mamba</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mamba</BasePath>
+      <RelativePath>assets/img/portfolio/efe9c569-9395-4454-9f97-ab3e8f54c6a8WhatsApp Image 2022-09-04 at 00.27.39 (1).jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\portfolio\efe9c569-9395-4454-9f97-ab3e8f54c6a8WhatsApp Image 2022-09-04 at 00.27.39 (1).jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\portfolio\portfolio-1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Mamba</SourceId>
