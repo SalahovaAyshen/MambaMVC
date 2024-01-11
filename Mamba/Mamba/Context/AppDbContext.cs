@@ -1,9 +1,10 @@
 ﻿using Mamba.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Mamba.Context
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext:IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -12,6 +13,8 @@ namespace Mamba.Context
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
+
 
     }
 }

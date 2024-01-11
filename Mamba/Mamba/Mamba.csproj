@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.25" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.25" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.25">
       <PrivateAssets>all</PrivateAssets>
@@ -21,6 +22,7 @@
     <None Include="wwwroot\manage\images\auth\.DS_Store" />
     <None Include="wwwroot\manage\images\faces\.DS_Store" />
     <None Include="wwwroot\manage\js\.DS_Store" />
+    <None Include="wwwroot\manage\vendors\.DS_Store" />
   </ItemGroup>
 
 </Project>
