@@ -74,7 +74,7 @@
             </div>
 
             <pre>
-                <a class="nav-link" asp-area="manage" asp-controller="account" asp-action="login">
+            <a class="nav-link" asp-area="manage" asp-controller="account" asp-action="login" asp-route-returnurl="@Context.Request.Path.Value">
                     <i class="mdi mdi-view-headline menu-icon"></i>
                     <span class="menu-title">Login</span>
                 </a>

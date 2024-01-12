@@ -72,7 +72,7 @@ namespace Mamba.Areas.Manage.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Login(LoginVM loginVM, string returnURL)
+        public async Task<IActionResult> Login(LoginVM loginVM, string returnurl)
         {
             if(!ModelState.IsValid)return View();
             AppUser user = await _userManager.FindByNameAsync(loginVM.UsernameOrEmail);
@@ -96,12 +96,12 @@ namespace Mamba.Areas.Manage.Controllers
                 ModelState.AddModelError(String.Empty, "Username, Email or Password is incorrect");
                 return View();
             }
-            if(returnURL == null)
+            if(returnurl == null)
             {
                 return RedirectToAction("Index", "Dashboard");
 
             }
-            return RedirectToAction(returnURL);
+            return Redirect(returnurl);
         }
     }
 }
