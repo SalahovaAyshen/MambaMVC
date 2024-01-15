@@ -1,12 +1,15 @@
 ﻿using Mamba.Areas.Manage.ViewModels;
 using Mamba.Context;
 using Mamba.Models;
+using Mamba.Utilities.Enums;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Mamba.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [Authorize(Roles =nameof(UserRole.Admin))]
     public class CategoryController : Controller
     {
         private readonly AppDbContext _context;

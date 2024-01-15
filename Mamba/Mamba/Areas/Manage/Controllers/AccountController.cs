@@ -1,5 +1,6 @@
 ﻿using Mamba.Areas.Manage.ViewModels;
 using Mamba.Models;
+using Mamba.Utilities.Enums;
 using Mamba.Utilities.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,11 +13,13 @@ namespace Mamba.Areas.Manage.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
         public IActionResult Register()
         {
@@ -102,6 +105,25 @@ namespace Mamba.Areas.Manage.Controllers
 
             }
             return Redirect(returnurl);
+        }
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Dashboard");
+        }
+        public async Task<IActionResult> CreateRoles()
+        {
+            foreach (UserRole item in Enum.GetValues(typeof(UserRole)))
+            {
+                if(!await _roleManager.RoleExistsAsync(item.ToString()))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole
+                    {
+                        Name = item.ToString(),
+                    });
+                }
+            }
+            return RedirectToAction("Index", "Dashboard");
         }
     }
 }

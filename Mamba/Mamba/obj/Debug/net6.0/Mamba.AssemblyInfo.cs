@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mamba")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc8d98d2ad1781dbb520ca155e2d87b9cded9abb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a065deb47e534432dee8ccafc7e909daf8a4bdac")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mamba")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mamba")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
