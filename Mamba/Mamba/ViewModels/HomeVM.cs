@@ -6,5 +6,6 @@ namespace Mamba.ViewModels
     {
         public ICollection<Slider> Sliders { get; set; }
         public ICollection<Project> Projects { get; set; }
+        public Dictionary<string, string> Settings { get; set; }
     }
 }
